@@ -13,13 +13,13 @@ set -e
 SCENE_DIR="$(pwd)/resources/scene_example"
 SCENE_POSE_DIR="${SCENE_DIR}/pose"
 SCENE_INTRINSIC_PATH="${SCENE_DIR}/intrinsic/intrinsic_color.txt"
-SCENE_INTRINSIC_RESOLUTION="[968,1296]" # change if your intrinsics are based on another resolution
+SCENE_INTRINSIC_RESOLUTION="[1024,1280]" # change if your intrinsics are based on another resolution
 SCENE_PLY_PATH="${SCENE_DIR}/scene_example.ply"
 SCENE_COLOR_IMG_DIR="${SCENE_DIR}/color"
 SCENE_DEPTH_IMG_DIR="${SCENE_DIR}/depth"
 IMG_EXTENSION=".jpg"
 DEPTH_EXTENSION=".png"
-DEPTH_SCALE=1000
+DEPTH_SCALE=4000
 # model ckpt paths
 MASK_MODULE_CKPT_PATH="$(pwd)/resources/scannet200_model.ckpt"
 SAM_CKPT_PATH="$(pwd)/resources/sam_vit_h_4b8939.pth"
