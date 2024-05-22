@@ -93,4 +93,11 @@ class PointCloud:
     
     def get_homogeneous_coordinates(self):
         return np.append(self.points, np.ones((self.num_points,1)), axis = -1)
-    
+
+
+class OpenSceneMatterportPointCloud(PointCloud):
+    def __init__(self,
+                 point_cloud_path):
+        data_3d = torch.load(point_cloud_path)
+        self.points, _, _ = data_3d
+        self.num_points = self.points.shape[0]
