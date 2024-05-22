@@ -80,7 +80,7 @@ class Images:
     
 class InstanceMasks3D:
     def __init__(self, masks_path):
-        self.masks = torch.load(masks_path)
+        self.masks = torch.load(masks_path).astype(bool)
         self.num_masks = self.masks.shape[1]
     
     
